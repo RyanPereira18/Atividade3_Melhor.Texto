@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="16dp"
+        android:text="Melhor Texto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rightTextView"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/leftTextView"
+        android:layout_width="168dp"
+        android:layout_height="402dp"
+        android:layout_margin="16dp"
+        android:text="Morbi in ultrices orci, porttitor tempus ex.
+        Etiam ac posuere est, vitae venenatis turpis. Curabitur nibh est,
+        tempus non bibendum non, euismod vel lectus. Etiam vel accumsan ex, sit amet posuere urna.
+        Aliquam posuere pretium tellus eget vestibulum. Nam aliquet eu ligula nec ullamcorper finibus.
+        Praesent id mi tempus maximus dui in, blandit urna. Etiam at ornare eros. Vel consectetur lacus.
+        Nam et posuere nulla, eget posuere ipsum. Donec congue ligula id posuere vulputate. Duis arcu,
+        maximus elementum porta, gravida dolor arcu.
+"
+        app:layout_constraintBottom_toTopOf="@id/barrier"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <TextView
+        android:id="@+id/rightTextView"
+        android:layout_width="142dp"
+        android:layout_height="413dp"
+        android:layout_margin="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nam interdum a nunc quis condimentum. Fusce interdum ex sed egestas consequat.
+        Nulla hendrerit gravida ultrices. Sed accumsan erat tristique, gravida urna sed, porttitor ligula.
+        Vestibulum sollicitudin dapibus enim. Maecenas in eros. Nam orci, mauris id faucibus maximus nulla,
+        feugiat massa velit sit amet lacus. Donec accumsan nisi mauris, nec iaculis mi viverra lacinia mauris.
+        Vivamus non nulla ornare egestas.
+"
+        app:layout_constraintBottom_toTopOf="@id/barrier"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="109dp"
+        android:layout_height="65dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="528dp"
+        android:text="DIREITA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/middleButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="120dp"
+        android:layout_height="59dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="520dp"
+        android:text="ESQUERDA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/middleButton"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <Button
+        android:id="@+id/middleButton"
+        android:layout_width="106dp"
+        android:layout_height="59dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="528dp"
+        android:text="EMPATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/leftButton"
+        app:layout_constraintRight_toLeftOf="@id/rightButton"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="leftTextView,rightTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
